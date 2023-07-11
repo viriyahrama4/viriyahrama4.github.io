@@ -21,11 +21,11 @@ window.onload = function () {
 };
 function rotateArrow() {
   console.log(document.getElementById("angle_arrow").style.rotate);
-  if (document.getElementById("angle_arrow").style.rotate == "-45deg") {
-    document.getElementById("angle_arrow").style.rotate = "135deg";
-  } else if (document.getElementById("angle_arrow").style.rotate == "135deg") {
-    document.getElementById("angle_arrow").style.rotate = "-45deg";
+  if (document.getElementById("angle_arrow").style.transform == "0deg") {
+    document.getElementById("angle_arrow").style.rotate = "180deg";
+  } else if (document.getElementById("angle_arrow").style.rotate == "180deg") {
+    document.getElementById("angle_arrow").style.rotate = "0deg";
   } else {
-    document.getElementById("angle_arrow").style.rotate = "135deg";
+    document.getElementById("angle_arrow").style.rotate = "180deg";
   }
 }

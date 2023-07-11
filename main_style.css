@@ -104,15 +104,13 @@ body {
 
 .angleArrow {
   display: inline-block;
-  background-color: #ffffff;
-  color: #818181 !important;
-  font-size: 25px;
-  width: 27px;
-  height: 27px;
-  rotate:-45deg;
-  transition: 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 15px;
-  border-radius: 50px;
+  rotate: 0deg;
+  transition:  0.3s;
 }
+
+.selectedSidebarItem {
+  background-color: #ffffff;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
