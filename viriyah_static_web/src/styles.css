@@ -63,7 +63,7 @@ body {
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
-    border-radius: 10px;
+    border-radius: 5px;
     border-width: 1px;
     border-style: solid;
     /* box-shadow: 5px 0px 5px 5px #b8b8b8; */
