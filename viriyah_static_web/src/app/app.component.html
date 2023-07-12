@@ -13,16 +13,16 @@
     <div>
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-            <div  class="sidebarItems selectedSidebarItem"><a href="accident/1.html">อุบัติเหตุส่วนบุคคล
+            <div class="sidebarItems selectedSidebarItem" [ngClass]="{'selectedSidebarItem': id === '1'}" id="1" (click)="addClass('1')"><a>อุบัติเหตุส่วนบุคคล
                     มีค่ารักษา</a></div>
-            <div class="sidebarItems"><a href="#">อุบัติเหตุ อุ่นใจ 24 ชั่วโมง มีค่ารักษาและค่าชดเชย</a></div>
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': id === '2'}" (click)="addClass('2')"><a href="#">อุบัติเหตุ อุ่นใจ 24 ชั่วโมง มีค่ารักษาและค่าชดเชย</a></div>
             <div class="sidebarItems"><a href="#">อุบัติเหตุ อุ่นใจกระดูกหัก</a></div>
             <div class="sidebarItems"><a href="#">แผนรูมแคร์</a></div>
-            <div class="sidebarItems" onclick="rotateArrow()">
+            <div class="sidebarItems" (click)="rotateArrow()">
                 <div style="display: inline-block;"  data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false"
                     aria-controls="collapseExample">
                     <a style="display: inline-block; color: #818181 !important;" >แผนประกันสุขภาพเหมาจ่าย
-                    </a><div id="angle_arrow" style="display: inline-block;" class="angleArrow"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24"
+                    </a><div id="angleArrow" style="display: inline-block;" class="angleArrow"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24"
                         style="fill: #818181;transform: msFilter">
                         <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
                     </svg></div>
@@ -30,7 +30,7 @@
             </div>
 
             <div class="collapse" id="collapseExample">
-                <div class="collapesItems"><a href="#">วี เบ็ทเทอร์ แคร์</a></div>
+                <div class="collapesItems"><a routerLink="/health" routerLinkActive="active" >วี เบ็ทเทอร์ แคร์</a></div>
                 <div class="collapesItems"><a href="#">วี เพรสทีจ แคร์</a></div>
                 <div class="collapesItems"><a href="#">วี ดีไลท์ แคร์ บาย เกษมราษฎร์</a></div>
                 <div class="collapesItems"><a href="#">วิริยะ คลาสสิค บาย บีดีเอ็มเอส</a></div>
@@ -44,16 +44,10 @@
         </div>
 
         <div id="main">
-            <img width="100%" height="100%" src="assets/images/head.jpg"
+            <img width="100%" height="100%" src="../assets/images/head.jpg"
                 style="position:relative; border-radius: 10px 10px 0px 0px;">
             <button class="openbtn" (click)="openNav()">&#9776; เมนู</button>
-            <h2>Collapsed Sidebar</h2>
-            <p>Content...</p>
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-primary">Left</button>
-              <button type="button" class="btn btn-primary">Middle</button>
-              <button type="button" class="btn btn-primary">Right</button>
-            </div>
+            <router-outlet></router-outlet>
         </div>
     </div>
 
