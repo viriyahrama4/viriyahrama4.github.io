@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   mySidebar: any;
   main: any;
   angleArrow: any;
-  id: String = '1';
+  id: String = 'personal';
 
   ngOnInit(): void {
     this.mySidebar = document.getElementById("mySidebar") as HTMLFormElement | null;

@@ -1,4 +1,3 @@
-
 <head>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -13,34 +12,74 @@
     <div>
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-            <div class="sidebarItems selectedSidebarItem" [ngClass]="{'selectedSidebarItem': id === '1'}" id="1" (click)="addClass('1')"><a>อุบัติเหตุส่วนบุคคล
-                    มีค่ารักษา</a></div>
-            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': id === '2'}" (click)="addClass('2')"><a href="#">อุบัติเหตุ อุ่นใจ 24 ชั่วโมง มีค่ารักษาและค่าชดเชย</a></div>
-            <div class="sidebarItems"><a href="#">อุบัติเหตุ อุ่นใจกระดูกหัก</a></div>
-            <div class="sidebarItems"><a href="#">แผนรูมแคร์</a></div>
-            <div class="sidebarItems" (click)="rotateArrow()">
-                <div style="display: inline-block;"  data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false"
-                    aria-controls="collapseExample">
-                    <a style="display: inline-block; color: #818181 !important;" >แผนประกันสุขภาพเหมาจ่าย
-                    </a><div id="angleArrow" style="display: inline-block;" class="angleArrow"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24"
-                        style="fill: #818181;transform: msFilter">
-                        <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-                    </svg></div>
+            <a routerLink="/" routerLinkActive="active">
+                <div class="sidebarItems selectedSidebarItem" [ngClass]="{'selectedSidebarItem': id === 'personal'}"
+                    id="personal" (click)="addClass('personal')">อุบัติเหตุส่วนบุคคล
+                    มีค่ารักษา</div>
+            </a>
+            <a routerLink="/24hours" routerLinkActive="active">
+                <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': id === 'everytime'}" id="everytime"
+                    (click)="addClass('everytime')">อุบัติเหตุ อุ่นใจ 24 ชั่วโมง มีค่ารักษาและค่าชดเชย</div>
+            </a>
+            <a routerLink="/bone" routerLinkActive="active">
+                <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': id === 'bone'}" id="bone"
+                    (click)="addClass('bone')">อุบัติเหตุ อุ่นใจกระดูกหัก</div>
+            </a>
+            <a routerLink="/roomCare" routerLinkActive="active">
+                <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': id === 'roomCare'}" id="roomCare"
+                    (click)="addClass('roomCare')">แผนรูมแคร์</div>
+            </a>
+            <div class="sidebarItems">
+                <div style="display: inline-block;" data-bs-toggle="collapse" href="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    <div style="display: inline-block; color: #818181 !important; font-size: 20px;">
+                        แผนประกันสุขภาพเหมาจ่าย
+                    </div>
+                    <div id="angleArrow" style="display: inline-block;" class="angleArrow"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24"
+                            style="fill: #818181;transform: msFilter">
+                            <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                        </svg></div>
                 </div>
             </div>
 
             <div class="collapse" id="collapseExample">
-                <div class="collapesItems"><a routerLink="/health" routerLinkActive="active" >วี เบ็ทเทอร์ แคร์</a></div>
-                <div class="collapesItems"><a href="#">วี เพรสทีจ แคร์</a></div>
-                <div class="collapesItems"><a href="#">วี ดีไลท์ แคร์ บาย เกษมราษฎร์</a></div>
-                <div class="collapesItems"><a href="#">วิริยะ คลาสสิค บาย บีดีเอ็มเอส</a></div>
-                <div class="collapesItems"><a href="#">
-                    วิริยะ โกลด์ บาย บีดีเอ็มเอส
-                    </a></div>
-                <div class="collapesItems"><a href="#">วิริยะ เฮลท์แคร์ พลัส บาย บีดีเอ็มเอส</a></div>
+                <a [routerLink]="['/health', 'vBetter']" routerLinkActive="active">
+                    <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vBetter'}" id="vBetter"
+                        (click)="addClass('vBetter')">วี เบ็ทเทอร์ แคร์</div>
+                </a>
+                <a [routerLink]="['/health', 'vPrestige']" routerLinkActive="active">
+                    <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vPrestige'}" id="vPrestige"
+                        (click)="addClass('vPrestige')">วี เพรสทีจ แคร์</div>
+                </a>
+                <a [routerLink]="['/health', 'vDelight']">
+                    <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vDelight'}" id="vDelight"
+                        (click)="addClass('vDelight')">วี ดีไลท์ แคร์ บาย เกษมราษฎร์</div>
+                </a>
+                <a [routerLink]="['/health', 'vDeluxe']">
+                    <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vDeluxe'}" id="vDeluxe"
+                        (click)="addClass('vDeluxe')">วี ดีลักซ์ แคร์ บาย เกษมราษฎร์</div>
+                </a>
+                <a [routerLink]="['/health', 'vClassic']">
+                    <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vClassic'}" id="vClassic"
+                        (click)="addClass('vClassic')">วิริยะ คลาสสิค บาย บีดีเอ็มเอส</div>
+                </a>
+                <a [routerLink]="['/health', 'vGold']">
+                    <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vGold'}" id="vGold"
+                        (click)="addClass('vGold')">
+                        วิริยะ โกลด์ บาย บีดีเอ็มเอส
+                    </div>
+                </a>
+                <a [routerLink]="['/health', 'vHealthCare']">
+                    <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vHealthCare'}" id="vHealthCare"
+                        (click)="addClass('vHealthCare')">วิริยะ เฮลท์แคร์ พลัส บาย บีดีเอ็มเอส</div>
+                </a>
             </div>
 
-            <div class="sidebarItems"><a href="#">ติดต่อเรา</a></div>
+            <a routerLink="/contact" routerLinkActive="active">
+                <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': id === 'contact'}" id="contact"
+                (click)="addClass('contact')">ติดต่อเรา</div>
+            </a>
         </div>
 
         <div id="main">
