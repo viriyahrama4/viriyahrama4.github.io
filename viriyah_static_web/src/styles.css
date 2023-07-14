@@ -1,3 +1,8 @@
-
-  
+@font-face {
+    font-family: 'IBMPlexSansThai-Regular';
+    src: url('../src/assets/font/IBMPlexSansThai-Regular.ttf');
+  }
+* {
+    font-family: 'IBMPlexSansThai-Regular';
+}
   
