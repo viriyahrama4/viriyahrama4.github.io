@@ -12,24 +12,24 @@
     <div>
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-            <a routerLink="/" routerLinkActive="active">
+            <a routerLink="health-and-accident/" routerLinkActive="active">
                 <div class="sidebarItems selectedSidebarItem" [ngClass]="{'selectedSidebarItem': id === 'personal'}"
                     id="personal" (click)="addClass('personal')">อุบัติเหตุส่วนบุคคล
                     มีค่ารักษา</div>
             </a>
-            <a routerLink="/24hours" routerLinkActive="active">
+            <a routerLink="health-and-accident/24hours" routerLinkActive="active">
                 <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': id === 'everytime'}" id="everytime"
                     (click)="addClass('everytime')">อุบัติเหตุ อุ่นใจ 24 ชั่วโมง มีค่ารักษาและค่าชดเชย</div>
             </a>
-            <a routerLink="/bone" routerLinkActive="active">
+            <a routerLink="health-and-accident/bone" routerLinkActive="active">
                 <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': id === 'bone'}" id="bone"
                     (click)="addClass('bone')">อุบัติเหตุ อุ่นใจกระดูกหัก</div>
             </a>
-            <a routerLink="/roomCare" routerLinkActive="active">
+            <a routerLink="health-and-accident/roomCare" routerLinkActive="active">
                 <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': id === 'roomCare'}" id="roomCare"
                     (click)="addClass('roomCare')">แผนรูมแคร์</div>
             </a>
-            <div class="sidebarItems">
+            <div class="sidebarItems" (click)="rotateArrow()">
                 <div style="display: inline-block;" data-bs-toggle="collapse" href="#collapseExample"
                     aria-expanded="false" aria-controls="collapseExample">
                     <div style="display: inline-block; color: #818181 !important; font-size: 20px;">
@@ -44,39 +44,39 @@
             </div>
 
             <div class="collapse" id="collapseExample">
-                <a [routerLink]="['/health', 'vBetter']" routerLinkActive="active">
+                <a [routerLink]="['health-and-accident/health', 'vBetter']" routerLinkActive="active">
                     <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vBetter'}" id="vBetter"
                         (click)="addClass('vBetter')">วี เบ็ทเทอร์ แคร์</div>
                 </a>
-                <a [routerLink]="['/health', 'vPrestige']" routerLinkActive="active">
+                <a [routerLink]="['health-and-accident/health', 'vPrestige']" routerLinkActive="active">
                     <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vPrestige'}" id="vPrestige"
                         (click)="addClass('vPrestige')">วี เพรสทีจ แคร์</div>
                 </a>
-                <a [routerLink]="['/health', 'vDelight']">
+                <a [routerLink]="['health-and-accident/health', 'vDelight']">
                     <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vDelight'}" id="vDelight"
                         (click)="addClass('vDelight')">วี ดีไลท์ แคร์ บาย เกษมราษฎร์</div>
                 </a>
-                <a [routerLink]="['/health', 'vDeluxe']">
+                <a [routerLink]="['health-and-accident/health', 'vDeluxe']">
                     <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vDeluxe'}" id="vDeluxe"
                         (click)="addClass('vDeluxe')">วี ดีลักซ์ แคร์ บาย เกษมราษฎร์</div>
                 </a>
-                <a [routerLink]="['/health', 'vClassic']">
+                <a [routerLink]="['health-and-accident/health', 'vClassic']">
                     <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vClassic'}" id="vClassic"
                         (click)="addClass('vClassic')">วิริยะ คลาสสิค บาย บีดีเอ็มเอส</div>
                 </a>
-                <a [routerLink]="['/health', 'vGold']">
+                <a [routerLink]="['health-and-accident/health', 'vGold']">
                     <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vGold'}" id="vGold"
                         (click)="addClass('vGold')">
                         วิริยะ โกลด์ บาย บีดีเอ็มเอส
                     </div>
                 </a>
-                <a [routerLink]="['/health', 'vHealthCare']">
+                <a [routerLink]="['health-and-accident/health', 'vHealthCare']">
                     <div class="collapesItems" [ngClass]="{'selectedSidebarItem': id === 'vHealthCare'}"
                         id="vHealthCare" (click)="addClass('vHealthCare')">วิริยะ เฮลท์แคร์ พลัส บาย บีดีเอ็มเอส</div>
                 </a>
             </div>
 
-            <a routerLink="/contact" routerLinkActive="active">
+            <a routerLink="health-and-accident/contact" routerLinkActive="active">
                 <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': id === 'contact'}" id="contact"
                     (click)="addClass('contact')">ติดต่อเรา</div>
             </a>
