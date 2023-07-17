@@ -9,6 +9,7 @@ import { EverytimeComponent } from './health-and-accident/everytime/everytime.co
 import { BoneComponent } from './health-and-accident/bone/bone.component';
 import { RoomCareComponent } from './health-and-accident/room-care/room-care.component';
 import { ContactComponent } from './health-and-accident/contact/contact.component';
+import { SidebarComponent } from './health-and-accident/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContactComponent } from './health-and-accident/contact/contact.componen
     EverytimeComponent,
     BoneComponent,
     RoomCareComponent,
-    ContactComponent
+    ContactComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
