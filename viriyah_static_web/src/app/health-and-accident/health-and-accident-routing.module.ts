@@ -6,6 +6,7 @@ import { RoomCareComponent } from './room-care/room-care.component';
 import { HealthComponent } from './health/health.component';
 import { ContactComponent } from './contact/contact.component';
 import { PersonalComponent } from './personal/personal.component';
+import { HospitalComponent } from './hospital/hospital.component';
 
 const routes: Routes = [{ path: '', redirectTo: 'personal', pathMatch: 'full' }, 
 { path: 'personal', component: PersonalComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [{ path: '', redirectTo: 'personal', pathMatch: 'full' },
 { path: 'bone', component: BoneComponent },
 { path: 'roomCare', component: RoomCareComponent },
 { path: 'health/:type', component: HealthComponent },
+{ path: 'hospital', component: HospitalComponent },
 { path: 'contact', component: ContactComponent },];
 
 @NgModule({

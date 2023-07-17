@@ -10,6 +10,7 @@ import { BoneComponent } from './health-and-accident/bone/bone.component';
 import { RoomCareComponent } from './health-and-accident/room-care/room-care.component';
 import { ContactComponent } from './health-and-accident/contact/contact.component';
 import { SidebarComponent } from './health-and-accident/sidebar/sidebar.component';
+import { HospitalComponent } from './health-and-accident/hospital/hospital.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SidebarComponent } from './health-and-accident/sidebar/sidebar.componen
     BoneComponent,
     RoomCareComponent,
     ContactComponent,
-    SidebarComponent
+    SidebarComponent,
+    HospitalComponent
   ],
   imports: [
     BrowserModule,

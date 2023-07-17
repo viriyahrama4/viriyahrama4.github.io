@@ -45,29 +45,33 @@
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vDelight']">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vDelight'}"
-                    id="vDelight" (click)="sidebarService.addClass('vDelight')">วี ดีไลท์ แคร์ บาย เกษมราษฎร์</div>
+                    id="vDelight" (click)="sidebarService.addClass('vDelight')">วี ดีไลท์แคร์ บาย เกษมราษฎร์</div>
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vDeluxe']">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vDeluxe'}"
-                    id="vDeluxe" (click)="sidebarService.addClass('vDeluxe')">วี ดีลักซ์ แคร์ บาย เกษมราษฎร์</div>
+                    id="vDeluxe" (click)="sidebarService.addClass('vDeluxe')">วี ดีลักซ์แคร์ บาย เกษมราษฎร์</div>
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vClassic']">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vClassic'}"
-                    id="vClassic" (click)="sidebarService.addClass('vClassic')">วิริยะ คลาสสิค บาย บีดีเอ็มเอส</div>
+                    id="vClassic" (click)="sidebarService.addClass('vClassic')">วิริยะคลาสสิค บาย บีดีเอ็มเอส</div>
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vGold']">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vGold'}" id="vGold"
                     (click)="sidebarService.addClass('vGold')">
-                    วิริยะ โกลด์ บาย บีดีเอ็มเอส
+                    วิริยะโกลด์ บาย บีดีเอ็มเอส
                 </div>
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vHealthCare']">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vHealthCare'}"
-                    id="vHealthCare" (click)="sidebarService.addClass('vHealthCare')">วิริยะ เฮลท์แคร์ พลัส บาย
+                    id="vHealthCare" (click)="sidebarService.addClass('vHealthCare')">วิริยะเฮลท์แคร์ บาย
                     บีดีเอ็มเอส</div>
             </a>
         </div>
 
+                <a routerLink="/health-and-accident/hospital" routerLinkActive="active">
+                    <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'hospital'}" id="hospital"
+                        (click)="sidebarService.addClass('hospital')">สถานพยาบาลคู่สัญญา</div>
+                </a>
         <a routerLink="/health-and-accident/contact" routerLinkActive="active">
             <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'contact'}" id="contact"
                 (click)="sidebarService.addClass('contact')">ติดต่อเรา</div>
@@ -78,7 +82,7 @@
         <img width="100%" height="100%" src="../assets/images/head.jpg"
             style="position:relative; border-radius: 10px 10px 0px 0px;">
         <div style="width: 100%; margin-left: auto; margin-right: auto; margin-top: 0.5%;" class="row ">
-            <button class="openbtn col-2" style="width: 10vh;" (click)="sidebarService.openNav()">&#9776; เมนู</button>
+            <button class="openbtn col-2" style="width: 10vh;" id="menuButton" (click)="sidebarService.openNav()" >&#9776; เมนู</button>
             <div class="col" style="background-color: #0032A1;"></div>
         </div>
         <div style=" background-color: #9cb1df; border-radius: 0px 0px 10px 10px; margin-bottom: 1vh;">
