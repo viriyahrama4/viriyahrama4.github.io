@@ -26,7 +26,6 @@ export class HealthComponent implements OnInit {
   }
 
   chooseType(): void{
-    console.log(this.type)
     if (this.type == 'vBetter'){
       this.folder = 'v-better'
       this.title = 'V Better Care'

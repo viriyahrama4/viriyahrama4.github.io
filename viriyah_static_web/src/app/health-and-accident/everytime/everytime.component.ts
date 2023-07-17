@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SidebarService } from '../sidebar/sidebar.service';
+import { SidebarService } from '../sidebar.service';
 
 @Component({
   selector: 'app-everytime',
@@ -7,7 +7,6 @@ import { SidebarService } from '../sidebar/sidebar.service';
   styleUrls: ['./everytime.component.css']
 })
 export class EverytimeComponent {
-[x: string]: any;
     constructor(public sidebarSevice: SidebarService){}
 
 }
