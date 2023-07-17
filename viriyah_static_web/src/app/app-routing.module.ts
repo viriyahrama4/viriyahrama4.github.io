@@ -8,6 +8,7 @@ import { RoomCareComponent } from './health-and-accident/room-care/room-care.com
 import { ContactComponent } from './health-and-accident/contact/contact.component';
 
 const routes: Routes = [{ path: 'health-and-accident', loadChildren: () => import('./health-and-accident/health-and-accident.module').then(m => m.HealthAndAccidentModule)},
+    { path: 'parts', loadChildren: () => import('./parts/parts.module').then(m => m.PartsModule) },
 
 ];
 

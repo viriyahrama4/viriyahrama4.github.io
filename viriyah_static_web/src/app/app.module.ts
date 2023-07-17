@@ -11,6 +11,9 @@ import { RoomCareComponent } from './health-and-accident/room-care/room-care.com
 import { ContactComponent } from './health-and-accident/contact/contact.component';
 import { SidebarComponent } from './health-and-accident/sidebar/sidebar.component';
 import { HospitalComponent } from './health-and-accident/hospital/hospital.component';
+import { VCompleteComponent } from './parts/v-complete/v-complete.component';
+import { VWarrantyComponent } from './parts/v-warranty/v-warranty.component';
+import { SidebarPartsComponent } from './parts/sidebar-parts/sidebar-parts.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { HospitalComponent } from './health-and-accident/hospital/hospital.compo
     RoomCareComponent,
     ContactComponent,
     SidebarComponent,
-    HospitalComponent
+    HospitalComponent,
+    VCompleteComponent,
+    VWarrantyComponent,
+    SidebarPartsComponent
   ],
   imports: [
     BrowserModule,
