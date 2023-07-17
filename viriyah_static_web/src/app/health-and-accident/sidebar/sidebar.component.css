@@ -7,7 +7,7 @@ body {
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
+    background-color: #011F5B;
     color: white;
     border: none;
     height: 6vh;
@@ -15,7 +15,7 @@ body {
   }
   
   .openbtn:hover {
-    background-color: #444;
+    background-color: #0640b4;
   }
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -48,7 +48,7 @@ body {
     /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #011F5B;
     /* Black*/
     overflow-x: hidden;
     /* Disable horizontal scroll */
@@ -99,6 +99,7 @@ body {
     padding: 8px 8px 8px 15px;
     display: block;
     transition: 0.3s;
+    color: white;
   }
   
   .collapesItems {
@@ -106,6 +107,7 @@ body {
     padding: 8px 8px 8px 25px;
     display: block;
     transition: 0.3s;
+    color: white;
   }
   
   .angleArrow {
@@ -122,5 +124,6 @@ body {
     background-color: #ffffff;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    color: #000000;
+    color: black;
+    font-weight: 600;
   }
