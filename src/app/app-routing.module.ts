@@ -7,7 +7,8 @@ import { BoneComponent } from './health-and-accident/bone/bone.component';
 import { RoomCareComponent } from './health-and-accident/room-care/room-care.component';
 import { ContactComponent } from './health-and-accident/contact/contact.component';
 
-const routes: Routes = [{ path: 'health-and-accident', loadChildren: () => import('./health-and-accident/health-and-accident.module').then(m => m.HealthAndAccidentModule)},
+const routes: Routes = [{ path: '', redirectTo: 'health-and-accident', pathMatch: 'full' },
+    { path: 'health-and-accident', loadChildren: () => import('./health-and-accident/health-and-accident.module').then(m => m.HealthAndAccidentModule)},
     { path: 'parts', loadChildren: () => import('./parts/parts.module').then(m => m.PartsModule) },
 
 ];
