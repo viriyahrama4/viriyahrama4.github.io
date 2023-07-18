@@ -20,6 +20,9 @@ export class SidebarPartsComponent {
                 else if (currentSubPath == 'v-complete') {
                     sidebarService.addClass('v-complete')
                 }
+                else if (currentSubPath == 'contact') {
+                    sidebarService.addClass('contact')
+                }
                 
             }
         )

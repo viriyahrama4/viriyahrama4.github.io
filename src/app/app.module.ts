@@ -14,6 +14,7 @@ import { HospitalComponent } from './health-and-accident/hospital/hospital.compo
 import { VCompleteComponent } from './parts/v-complete/v-complete.component';
 import { VWarrantyComponent } from './parts/v-warranty/v-warranty.component';
 import { SidebarPartsComponent } from './parts/sidebar-parts/sidebar-parts.component';
+import { ContactPartsComponent } from './parts/contact-parts/contact-parts.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SidebarPartsComponent } from './parts/sidebar-parts/sidebar-parts.compo
     HospitalComponent,
     VCompleteComponent,
     VWarrantyComponent,
-    SidebarPartsComponent
+    SidebarPartsComponent,
+    ContactPartsComponent
   ],
   imports: [
     BrowserModule,
