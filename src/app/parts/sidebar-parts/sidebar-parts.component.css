@@ -2,27 +2,36 @@
 body {
     height: 100%;
     width: 100%;
-  }
-    /* The button used to open the sidebar */
-  .openbtn {
-    font-size: 2.5vh;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 2.4vh;
     cursor: pointer;
     background-color: #011F5B;
     color: white;
     border: none;
     height: 6vh;
     vertical-align: middle;
-  }
-  
-  .openbtn:hover {
-    background-color: #0640b4;
-  }
-  
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-  #main {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.openbtn:hover {
+    background-color: #0e245f;
+}
+
+.page {
+    background-color: #f0f2f5;
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 1vh;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
     border-radius: 5px;
     /* box-shadow: 5px 0px 5px 5px #b8b8b8; */
-    transition: margin-left 0.5s;
+    transition: margin-left 0.3s;
     /* If you want a transition effect */
     padding: 10px 5px 0px 5px;
     width: 100%;
@@ -31,16 +40,17 @@ body {
     margin-right: auto;
     max-width: 900px;
     background-color: #ffffff;
-  }
-  .arrange{
+}
+
+.arrange {
     margin-left: 350px !important;
-  }
-  
-  /* The sidebar menu */
-  .sidebar {
+}
+
+/* The sidebar menu */
+.sidebar {
     height: 100%;
     /* 100% Full-height */
-    width: 350px;
+    width: 340px;
     /* 0 width - change this with JavaScript */
     position: fixed;
     /* Stay in place */
@@ -49,81 +59,84 @@ body {
     top: 0;
     left: 0;
     background-color: #011F5B;
+    box-shadow: 0px 0px 10px 0px #777777;
     /* Black*/
     overflow-x: hidden;
     /* Disable horizontal scroll */
     padding-top: 60px;
     /* Place content 60px from the top */
-    transition: 0.5s;
+    transition: 0.3s;
     /* 0.5 second transition effect to slide in the sidebar */
-  }
-  
-  /* The sidebar links */
-  .sidebar a {
+}
+
+/* The sidebar links */
+.sidebar a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     color: #818181;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidebar a:hover {
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
     color: #f1f1f1;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .sidebar .closebtn {
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
-  
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
     .sidebar {
-      padding-top: 15px;
+        padding-top: 15px;
     }
-  
+
     .sidebar a {
-      font-size: 20px;
+        font-size: 18px;
     }
-  }
-  .hidden {
+}
+
+.hidden {
     width: 0px;
-  }
-  
-  .sidebarItems {
+}
+
+.sidebarItems {
     width: 100%;
     padding: 8px 8px 8px 15px;
     display: block;
     transition: 0.3s;
     color: white;
-  }
-  
-  .collapesItems {
+    cursor: pointer;
+}
+
+.collapesItems {
     width: 100%;
-    padding: 8px 8px 8px 70px;
+    padding: 8px 8px 8px 60px;
     display: block;
     transition: 0.3s;
     color: white;
-  }
-  
-  .angleArrow {
+}
+
+.angleArrow {
     display: inline-block;
     rotate: 0deg;
-    transition:  0.3s;
-  }
+    transition: 0.3s;
+}
 
-  .rotateArrow {
+.rotateArrow {
     rotate: 180deg;
-  }
-  
-  .selectedSidebarItem {
+}
+
+.selectedSidebarItem {
     background-color: #ffffff;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
     color: black;
     font-weight: 600;
-  }
+}
