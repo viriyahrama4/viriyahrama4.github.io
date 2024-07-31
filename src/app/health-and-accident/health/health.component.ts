@@ -62,6 +62,16 @@ export class HealthComponent implements OnInit {
             this.fileNames = [1, 2, 3, 4, 5];
             this.title = 'Viriyah Healthcare'
         }
+        else if (this.type == 'vCancerEasy') {
+            this.folder = 'v-cancer-easy'
+            this.fileNames = [1, 2, 3, 4];
+            this.title = 'Viriyah Cancer Easy'
+        }
+        else if (this.type == 'vCancerPro') {
+            this.folder = 'v-cancer-pro'
+            this.fileNames = [1, 2, 3, 4];
+            this.title = 'Viriyah Cancer Pro'
+        }
 
 
     }

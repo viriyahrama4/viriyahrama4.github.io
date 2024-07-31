@@ -66,6 +66,14 @@
                     id="vHealthCare" (click)="sidebarService.addClass('vHealthCare'); sidebarService.closeNav();">วิริยะเฮลท์แคร์ บาย
                     บีดีเอ็มเอส</div>
             </a>
+            <a [routerLink]="['/health-and-accident/health', 'vCancerEasy']">
+                <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vCancerEasy'}"
+                    id="vCancerEasy" (click)="sidebarService.addClass('vCancerEasy'); sidebarService.closeNav();">วี แคนเซอร์ อีซี</div>
+            </a>
+            <a [routerLink]="['/health-and-accident/health', 'vCancerPro']">
+                <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vCancerPro'}"
+                    id="vCancerPro" (click)="sidebarService.addClass('vCancerPro'); sidebarService.closeNav();">วี แคนเซอร์ โปร</div>
+            </a>
         </div>
 
                 <a routerLink="/health-and-accident/hospital" routerLinkActive="active">
@@ -83,9 +91,9 @@
             style="position:relative; border-radius: 10px 10px 0px 0px;">
         <div style="width: 100%; margin-left: auto; margin-right: auto; margin-top: 0.5%;" class="row ">
             <button class="openbtn col-2" style="width: 12vh;" id="menuButton" (click)="sidebarService.openNav()" >&#9776; เมนู</button>
-            <div class="col" style="background-color: #0032A1;"></div>
+            <div class="col" style="background-color: #011F5B;"></div>
         </div>
-        <div style=" background-color: #9cb1df; border-radius: 0px 0px 10px 10px; margin-bottom: 1vh;">
+        <div class="page">
             <div style="padding: 3vh;">
                 <ng-content></ng-content>
             </div>

@@ -55,6 +55,12 @@ export class SidebarComponent {
                     else if (currentHealthSubPath == 'vHealthCare'){
                         sidebarService.addClass('vHealthCare')
                     }
+                    else if (currentHealthSubPath == 'vCancerEasy'){
+                        sidebarService.addClass('vCancerEasy')
+                    }
+                    else if (currentHealthSubPath == 'vCancerPro') {
+                        sidebarService.addClass('vCancerPro')
+                    }
                 }
                 else if (currentSubPath == 'contact'){
                     sidebarService.addClass('contact')
