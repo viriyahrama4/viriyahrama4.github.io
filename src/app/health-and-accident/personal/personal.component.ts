@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SidebarService } from '../sidebar.service';
+import { SidebarHealthService } from '../sidebar-health.service';
 
 @Component({
   selector: 'app-personal',
@@ -7,7 +7,7 @@ import { SidebarService } from '../sidebar.service';
   styleUrls: ['./personal.component.css']
 })
 export class PersonalComponent {
-    constructor(public sidebarService: SidebarService){
+    constructor(public sidebarService: SidebarHealthService){
         
     }
 

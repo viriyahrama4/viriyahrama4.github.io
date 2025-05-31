@@ -9,7 +9,7 @@ import { EverytimeComponent } from './health-and-accident/everytime/everytime.co
 import { BoneComponent } from './health-and-accident/bone/bone.component';
 import { RoomCareComponent } from './health-and-accident/room-care/room-care.component';
 import { ContactComponent } from './health-and-accident/contact/contact.component';
-import { SidebarComponent } from './health-and-accident/sidebar/sidebar.component';
+import { SidebarHealthComponent } from './health-and-accident/sidebar-health/sidebar-health.component';
 import { HospitalComponent } from './health-and-accident/hospital/hospital.component';
 import { VCompleteComponent } from './parts/v-complete/v-complete.component';
 import { VWarrantyComponent } from './parts/v-warranty/v-warranty.component';
@@ -25,7 +25,7 @@ import { ContactPartsComponent } from './parts/contact-parts/contact-parts.compo
     BoneComponent,
     RoomCareComponent,
     ContactComponent,
-    SidebarComponent,
+    SidebarHealthComponent,
     HospitalComponent,
     VCompleteComponent,
     VWarrantyComponent,

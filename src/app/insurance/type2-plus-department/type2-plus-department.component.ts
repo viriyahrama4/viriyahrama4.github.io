@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./type2-plus-department.component.css']
 })
 export class Type2PlusDepartmentComponent {
-
+    public type: any;
+    fileNames: Array<number> = [1,2,3];
+    folder: String = 'insurance/type2-plus-department';
 }

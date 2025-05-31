@@ -1,0 +1,105 @@
+<div>
+    <div id="mySidebar" class="sidebar" [ngClass]="{'hidden': sidebarService.isHidden}">
+        <a href="javascript:void(0)" class="closebtn" (click)="sidebarService.closeNav()">&times;</a>
+
+        <a routerLink="/insurance/type1" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'type1'}" id="type1"
+                (click)="sidebarService.addClass('type1'); sidebarService.closeNav();">
+                ประกันภัยรถยนต์ ประเภท 1
+            </div>
+        </a>
+
+        <a routerLink="/insurance/type1-paylite" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'type1-paylite'}" id="type1-paylite"
+                (click)="sidebarService.addClass('type1-paylite'); sidebarService.closeNav();">
+                ประกันภัยรถยนต์ ประเภท 1 PayLite
+            </div>
+        </a>
+
+        <a routerLink="/insurance/type2" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'type2'}" id="type2"
+                (click)="sidebarService.addClass('type2'); sidebarService.closeNav();">
+                ประกันภัยรถยนต์ ประเภท 2
+            </div>
+        </a>
+
+        <a routerLink="/insurance/type3" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'type3'}" id="type3"
+                (click)="sidebarService.addClass('type3'); sidebarService.closeNav();">
+                ประกันภัยรถยนต์ ประเภท 3
+            </div>
+        </a>
+
+        <a routerLink="/insurance/type4" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'type4'}" id="type4"
+                (click)="sidebarService.addClass('type4'); sidebarService.closeNav();">
+                ประกันภัยรถยนต์ ประเภท 4
+            </div>
+        </a>
+
+        <a routerLink="/insurance/type2-plus" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'type2-plus'}"
+                id="type2-plus" (click)="sidebarService.addClass('type2-plus'); sidebarService.closeNav();">
+                ประกันภัยรถยนต์ 2+
+            </div>
+        </a>
+
+        <a routerLink="/insurance/type2-plus-department" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'type2-plus-department'}"
+                id="type2-plus-department"
+                (click)="sidebarService.addClass('type2-plus-department'); sidebarService.closeNav();">
+                ประกันภัยรถยนต์ 2+ ซ่อมห้าง
+            </div>
+        </a>
+
+        <a routerLink="/insurance/type2-plus-good-drive" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'type2-plus-good-drive'}"
+                id="type2-plus-good-drive"
+                (click)="sidebarService.addClass('type2-plus-good-drive'); sidebarService.closeNav();">
+                ประกันภัยรถยนต์ 2+ Good Drive
+            </div>
+        </a>
+
+        <a routerLink="/insurance/type3-plus" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'type3-plus'}"
+                id="type3-plus" (click)="sidebarService.addClass('type3-plus'); sidebarService.closeNav();">
+                ประกันภัยรถยนต์ 3+
+            </div>
+        </a>
+
+        <a routerLink="/insurance/v-mortor" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'v-mortor'}" id="v-mortor"
+                (click)="sidebarService.addClass('v-mortor'); sidebarService.closeNav();">
+                V-Motor Add on
+            </div>
+        </a>
+        
+        <a routerLink="/insurance/unnamed-driver" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'unnamed-driver'}"
+                id="unnamed-driver" (click)="sidebarService.addClass('unnamed-driver'); sidebarService.closeNav();">
+                ประกันอุบัติเหตุ UD Unnamed Driver
+            </div>
+        </a>
+        
+        <a routerLink="/insurance/v-roadside" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'v-roadside'}" id="v-roadside"
+                (click)="sidebarService.addClass('v-roadside'); sidebarService.closeNav();">
+                บริการช่วยเหลือฉุกเฉิน V Roadside Service
+            </div>
+        </a>
+    </div>
+    <div id="main" class="container" [ngClass]="{'arrange': sidebarService.isArranged}">
+        <img width="100%" height="100%" src="../assets/images/head.jpg"
+            style="position:relative; border-radius: 10px 10px 0px 0px;">
+        <div style="width: 100%; margin-left: auto; margin-right: auto; margin-top: 0.5%;" class="row ">
+            <button class="openbtn col-2" style="width: 12vh;" id="menuButton"
+                (click)="sidebarService.openNav()">&#9776; เมนู</button>
+            <div class="col" style="background-color: #011F5B;"></div>
+        </div>
+        <div class="page">
+            <div style="padding: 3vh;">
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>
+</div>
