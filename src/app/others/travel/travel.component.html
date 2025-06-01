@@ -1,0 +1,10 @@
+<app-sidebar-others>
+    <div class="title">
+        <h1>{{title}}</h1>
+    </div>
+    <div style="padding-left: 5%; padding-right: 5%;" *ngFor="let fileName of fileNames">
+        <img width="100%" height="100%" style="margin-bottom: 2%;"
+            src="../../assets/doc/health/{{folder}}/{{fileName}}.png">
+
+    </div>
+</app-sidebar-others>

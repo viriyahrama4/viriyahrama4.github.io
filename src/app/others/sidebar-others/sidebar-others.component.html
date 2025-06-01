@@ -1,0 +1,36 @@
+
+<div>
+    <div id="mySidebar" class="sidebar" [ngClass]="{'hidden': sidebarService.isHidden}">
+        <a href="javascript:void(0)" class="closebtn" (click)="sidebarService.closeNav()">&times;</a>
+        <a routerLink="/others/v-warranty" routerLinkActive="active">
+            <div class="sidebarItems selectedSidebarItem"
+                [ngClass]="{'selectedSidebarItem': sidebarService.id === 'v-warranty'}" id="v-warranty"
+                (click)="sidebarService.addClass('v-warranty'); sidebarService.closeNav();">V-Warranty
+                </div>
+        </a>
+        <a routerLink="/others/v-complete" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'v-complete'}"
+                id="v-complete" (click)="sidebarService.addClass('v-complete'); sidebarService.closeNav();">V-Complete</div>
+        </a>
+        <a routerLink="/others/contact" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'contact'}"
+                id="contact" (click)="sidebarService.addClass('contact'); sidebarService.closeNav();">ติดต่อเรา</div>
+        </a>
+        
+
+    </div>
+    <div id="main" class="container" [ngClass]="{'arrange': sidebarService.isArranged}">
+        <img width="100%" height="100%" src="../assets/images/head.jpg"
+            style="position:relative; border-radius: 10px 10px 0px 0px;">
+        <div style="width: 100%; margin-left: auto; margin-right: auto; margin-top: 0.5%;" class="row ">
+            <button class="openbtn col-2" style="width: 12vh;" id="menuButton" (click)="sidebarService.openNav()">&#9776;
+                เมนู</button>
+            <div class="col" style="background-color: #011F5B;"></div>
+        </div>
+        <div class="page">
+            <div style="padding: 3vh;">
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

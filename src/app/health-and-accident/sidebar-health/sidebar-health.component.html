@@ -1,34 +1,15 @@
-<div >
+<div>
     <div id="mySidebar" class="sidebar" [ngClass]="{'hidden': sidebarService.isHidden}">
         <a href="javascript:void(0)" class="closebtn" (click)="sidebarService.closeNav()">&times;</a>
-        <a routerLink="/health-and-accident/" routerLinkActive="active">
-            <div class="sidebarItems selectedSidebarItem"
-                [ngClass]="{'selectedSidebarItem': sidebarService.id === 'personal'}" id="personal"
-                (click)="sidebarService.addClass('personal'); sidebarService.closeNav();">อุบัติเหตุส่วนบุคคล
-                มีค่ารักษา</div>
-        </a>
-        <a  routerLink="/health-and-accident/24hours" routerLinkActive="active">
-            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'everytime'}"
-                id="everytime" (click)="sidebarService.addClass('everytime'); sidebarService.closeNav();">อุบัติเหตุ อุ่นใจ 24 ชั่วโมง
-                มีค่ารักษาและค่าชดเชย</div>
-        </a>
-        <a routerLink="/health-and-accident/bone" routerLinkActive="active">
-            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'bone'}" id="bone"
-                (click)="sidebarService.addClass('bone'); sidebarService.closeNav();">อุบัติเหตุ อุ่นใจกระดูกหัก</div>
-        </a>
-        <a routerLink="/health-and-accident/roomCare" routerLinkActive="active">
-            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'roomCare'}"
-                id="roomCare" (click)="sidebarService.addClass('roomCare'); sidebarService.closeNav();">แผนรูมแคร์</div>
-        </a>
         <div class="sidebarItems" (click)="sidebarService.rotateArrow()">
             <div style="display: inline-block;" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false"
                 aria-controls="collapseExample">
                 <div style="display: inline-block; color: #ffffff !important; font-size: 20px;">
                     แผนประกันสุขภาพเหมาจ่าย
                 </div>
-                <div id="angleArrow" style="display: inline-block;" class="angleArrow" [ngClass]="{'rotateArrow': sidebarService.isRotated}"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24"
-                        style="fill: #ffffff;transform: msFilter">
+                <div id="angleArrow" style="display: inline-block;" class="angleArrow"
+                    [ngClass]="{'rotateArrow': sidebarService.isRotated}"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="27" height="27" viewBox="0 0 24 24" style="fill: #ffffff;transform: msFilter">
                         <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
                     </svg></div>
             </div>
@@ -37,23 +18,28 @@
         <div class="collapse" [ngClass]="{'show': isExpanded}" id="collapseExample">
             <a [routerLink]="['/health-and-accident/health', 'vBetter']" routerLinkActive="active">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vBetter'}"
-                    id="vBetter" (click)="sidebarService.addClass('vBetter'); sidebarService.closeNav();">วี เบ็ทเทอร์ แคร์</div>
+                    id="vBetter" (click)="sidebarService.addClass('vBetter'); sidebarService.closeNav();">วี เบ็ทเทอร์
+                    แคร์</div>
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vPrestige']" routerLinkActive="active">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vPrestige'}"
-                    id="vPrestige" (click)="sidebarService.addClass('vPrestige'); sidebarService.closeNav();">วี เพรสทีจ แคร์</div>
+                    id="vPrestige" (click)="sidebarService.addClass('vPrestige'); sidebarService.closeNav();">วี เพรสทีจ
+                    แคร์</div>
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vDelight']">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vDelight'}"
-                    id="vDelight" (click)="sidebarService.addClass('vDelight'); sidebarService.closeNav();">วี ดีไลท์แคร์ บาย เกษมราษฎร์</div>
+                    id="vDelight" (click)="sidebarService.addClass('vDelight'); sidebarService.closeNav();">วี
+                    ดีไลท์แคร์ บาย เกษมราษฎร์</div>
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vDeluxe']">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vDeluxe'}"
-                    id="vDeluxe" (click)="sidebarService.addClass('vDeluxe'); sidebarService.closeNav();">วี ดีลักซ์แคร์ บาย เกษมราษฎร์</div>
+                    id="vDeluxe" (click)="sidebarService.addClass('vDeluxe'); sidebarService.closeNav();">วี ดีลักซ์แคร์
+                    บาย เกษมราษฎร์</div>
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vClassic']">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vClassic'}"
-                    id="vClassic" (click)="sidebarService.addClass('vClassic'); sidebarService.closeNav();">วิริยะคลาสสิค บาย บีดีเอ็มเอส</div>
+                    id="vClassic" (click)="sidebarService.addClass('vClassic'); sidebarService.closeNav();">
+                    วิริยะคลาสสิค บาย บีดีเอ็มเอส</div>
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vGold']">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vGold'}" id="vGold"
@@ -63,23 +49,84 @@
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vHealthCare']">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vHealthCare'}"
-                    id="vHealthCare" (click)="sidebarService.addClass('vHealthCare'); sidebarService.closeNav();">วิริยะเฮลท์แคร์ บาย
+                    id="vHealthCare" (click)="sidebarService.addClass('vHealthCare'); sidebarService.closeNav();">
+                    วิริยะเฮลท์แคร์ บาย
                     บีดีเอ็มเอส</div>
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vCancerEasy']">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vCancerEasy'}"
-                    id="vCancerEasy" (click)="sidebarService.addClass('vCancerEasy'); sidebarService.closeNav();">วี แคนเซอร์ อีซี</div>
+                    id="vCancerEasy" (click)="sidebarService.addClass('vCancerEasy'); sidebarService.closeNav();">วี
+                    แคนเซอร์ อีซี</div>
             </a>
             <a [routerLink]="['/health-and-accident/health', 'vCancerPro']">
                 <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'vCancerPro'}"
-                    id="vCancerPro" (click)="sidebarService.addClass('vCancerPro'); sidebarService.closeNav();">วี แคนเซอร์ โปร</div>
+                    id="vCancerPro" (click)="sidebarService.addClass('vCancerPro'); sidebarService.closeNav();">วี
+                    แคนเซอร์ โปร</div>
             </a>
         </div>
 
-                <a routerLink="/health-and-accident/hospital" routerLinkActive="active">
-                    <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'hospital'}" id="hospital"
-                        (click)="sidebarService.addClass('hospital'); sidebarService.closeNav();">สถานพยาบาลคู่สัญญา</div>
-                </a>
+        <!-- PA Special Accident Plans Collapsible Group -->
+        <div class="sidebarItems" (click)="isPaExpanded = !isPaExpanded" data-bs-toggle="collapse"
+            href="#collapsePaExample" [attr.aria-expanded]="isPaExpanded" aria-controls="collapsePaExample">
+            <div style="display: inline-block;">
+                <span style="font-size: 20px; color: #ffffff;">
+                    แผนประกันอุบัติเหตุ
+                </span>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24"
+                        style="fill: #ffffff;" class="angleArrow" [ngClass]="{'rotateArrow': isPaExpanded}">
+                        <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="collapse" [ngClass]="{'show': isPaExpanded}" id="collapsePaExample">
+            <a [routerLink]="['/health-and-accident/accident', 'fracture']" routerLinkActive="active">
+                <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'fracture'}"
+                    id="fracture" (click)="sidebarService.addClass('fracture'); sidebarService.closeNav();">
+                    อุบัติเหตุ กระดูกหัก
+                </div>
+            </a>
+            <a [routerLink]="['/health-and-accident/accident', 'paAllGen']" routerLinkActive="active">
+                <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'paAllGen'}"
+                    id="paAllGen" (click)="sidebarService.addClass('paAllGen'); sidebarService.closeNav();">
+                    ประกันอุบัติเหตุ PA ออลเจน
+                </div>
+            </a>
+            <a [routerLink]="['/health-and-accident/accident', 'paBeautyCare']" routerLinkActive="active">
+                <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'paBeautyCare'}"
+                    id="paBeautyCare" (click)="sidebarService.addClass('paBeautyCare'); sidebarService.closeNav();">
+                    ประกันอุบัติเหตุ PA อุ่นใจบิวตี้แคร์
+                </div>
+            </a>
+            <a [routerLink]="['/health-and-accident/accident', 'paElderly']" routerLinkActive="active">
+                <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'paElderly'}"
+                    id="paElderly" (click)="sidebarService.addClass('paElderly'); sidebarService.closeNav();">
+                    ประกันอุบัติเหตุ PA อุ่นใจวัยเก๋า
+                </div>
+            </a>
+            <a [routerLink]="['/health-and-accident/accident', 'paFamily']" routerLinkActive="active">
+                <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'paFamily'}"
+                    id="paFamily" (click)="sidebarService.addClass('paFamily'); sidebarService.closeNav();">
+                    ประกันอุบัติเหตุ ครอบครัวสุขใจ
+                </div>
+            </a>
+            <a [routerLink]="['/health-and-accident/accident', 'paYouth']" routerLinkActive="active">
+                <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'paYouth'}"
+                    id="paYouth" (click)="sidebarService.addClass('paYouth'); sidebarService.closeNav();">
+                    ประกันอุบัติเหตุ PA อุ่นใจวัยซน
+                </div>
+            </a>
+        </div>
+        <a routerLink="/health-and-accident/roomCare" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'roomCare'}" id="roomCare"
+                (click)="sidebarService.addClass('roomCare'); sidebarService.closeNav();">แผนรูมแคร์</div>
+        </a>
+        <a routerLink="/health-and-accident/hospital" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'hospital'}"
+                id="hospital" (click)="sidebarService.addClass('hospital'); sidebarService.closeNav();">
+                สถานพยาบาลคู่สัญญา</div>
+        </a>
         <a routerLink="/health-and-accident/contact" routerLinkActive="active">
             <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'contact'}" id="contact"
                 (click)="sidebarService.addClass('contact'); sidebarService.closeNav();">ติดต่อเรา</div>
@@ -90,7 +137,8 @@
         <img width="100%" height="100%" src="../assets/images/head.jpg"
             style="position:relative; border-radius: 10px 10px 0px 0px;">
         <div style="width: 100%; margin-left: auto; margin-right: auto; margin-top: 0.5%;" class="row ">
-            <button class="openbtn col-2" style="width: 12vh;" id="menuButton" (click)="sidebarService.openNav()" >&#9776; เมนู</button>
+            <button class="openbtn col-2" style="width: 12vh;" id="menuButton"
+                (click)="sidebarService.openNav()">&#9776; เมนู</button>
             <div class="col" style="background-color: #011F5B;"></div>
         </div>
         <div class="page">
