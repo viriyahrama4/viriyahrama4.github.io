@@ -8,22 +8,36 @@ import { SidebarPartsService } from '../sidebar-parts.service';
   styleUrls: ['./sidebar-others.component.css']
 })
 export class SidebarOthersComponent {
-    isExpanded: boolean = false;
+    isProductExpanded: boolean = false;
+    isTravelExpanded: boolean = false;
 
     constructor(private route: ActivatedRoute, public sidebarService: SidebarPartsService) {
         this.route.url.subscribe(
             (url) => {
-                var currentSubPath = url[0]['path']
-                if (currentSubPath == 'v-warranty') {
-                    sidebarService.addClass('v-warranty')
+                const currentSubPath = url[0]['path'];
+                console.log(url)
+                console.log('Current sub-path:', currentSubPath);
+                // Group 1
+                if (currentSubPath === 'v-warranty' || currentSubPath === 'v-complete') {
+                    this.isProductExpanded = true;
+                    this.isTravelExpanded = false;
+                    sidebarService.addClass(currentSubPath);
                 }
-                else if (currentSubPath == 'v-complete') {
-                    sidebarService.addClass('v-complete')
+                // Group 2
+                else if (currentSubPath === 'travel') {
+                    var currentTravelSubPath = url[1]?.path;
+                    console.log('Current travel sub-path:', currentTravelSubPath);
+                    this.isProductExpanded = false;
+                    this.isTravelExpanded = true;
+                    sidebarService.addClass(currentTravelSubPath);
                 }
-                else if (currentSubPath == 'contact') {
-                    sidebarService.addClass('contact')
+
+                // Contact
+                else if (currentSubPath === 'contact') {
+                    this.isProductExpanded = false;
+                    this.isTravelExpanded = false;
+                    sidebarService.addClass('contact');
                 }
-                
             }
         )
     }

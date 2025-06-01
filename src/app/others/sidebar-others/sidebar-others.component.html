@@ -1,29 +1,79 @@
-
 <div>
     <div id="mySidebar" class="sidebar" [ngClass]="{'hidden': sidebarService.isHidden}">
         <a href="javascript:void(0)" class="closebtn" (click)="sidebarService.closeNav()">&times;</a>
-        <a routerLink="/others/v-warranty" routerLinkActive="active">
-            <div class="sidebarItems selectedSidebarItem"
-                [ngClass]="{'selectedSidebarItem': sidebarService.id === 'v-warranty'}" id="v-warranty"
-                (click)="sidebarService.addClass('v-warranty'); sidebarService.closeNav();">V-Warranty
-                </div>
-        </a>
-        <a routerLink="/others/v-complete" routerLinkActive="active">
-            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'v-complete'}"
-                id="v-complete" (click)="sidebarService.addClass('v-complete'); sidebarService.closeNav();">V-Complete</div>
-        </a>
-        <a routerLink="/others/contact" routerLinkActive="active">
-            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'contact'}"
-                id="contact" (click)="sidebarService.addClass('contact'); sidebarService.closeNav();">ติดต่อเรา</div>
-        </a>
-        
 
+        <!-- 1st Collapsible: V-Warranty & V-Complete -->
+        <div class="sidebarItems" (click)="isProductExpanded = !isProductExpanded" data-bs-toggle="collapse"
+            href="#collapseProduct" [attr.aria-expanded]="isProductExpanded" aria-controls="collapseProduct">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 20px; color: #ffffff;">
+                    ประกันอะไหล่
+                </span>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24"
+                        style="fill: #ffffff;" class="angleArrow" [ngClass]="{'rotateArrow': isProductExpanded}">
+                        <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="collapse" [ngClass]="{'show': isProductExpanded}" id="collapseProduct">
+            <a [routerLink]="['/others', 'v-warranty']" routerLinkActive="active">
+                <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'v-warranty'}"
+                    id="v-warranty" (click)="sidebarService.addClass('v-warranty'); sidebarService.closeNav();">
+                    V-Warranty
+                </div>
+            </a>
+            <a [routerLink]="['/others', 'v-complete']" routerLinkActive="active">
+                <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'v-complete'}"
+                    id="v-complete" (click)="sidebarService.addClass('v-complete'); sidebarService.closeNav();">
+                    V-Complete
+                </div>
+            </a>
+        </div>
+
+        <!-- 2nd Collapsible: V Travel & V Travel Thailand -->
+        <div class="sidebarItems" (click)="isTravelExpanded = !isTravelExpanded" data-bs-toggle="collapse"
+            href="#collapseTravel" [attr.aria-expanded]="isTravelExpanded" aria-controls="collapseTravel">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 20px; color: #ffffff;">
+                    ประกันการเดินทาง
+                </span>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24"
+                        style="fill: #ffffff;" class="angleArrow" [ngClass]="{'rotateArrow': isTravelExpanded}">
+                        <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="collapse" [ngClass]="{'show': isTravelExpanded}" id="collapseTravel">
+            <a [routerLink]="['/others/travel', 'v-travel']" routerLinkActive="active">
+                <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'v-travel'}"
+                    id="v-travel" (click)="sidebarService.addClass('v-travel'); sidebarService.closeNav();">
+                    V Travel
+                </div>
+            </a>
+            <a [routerLink]="['/others/travel', 'v-travel-thai']" routerLinkActive="active">
+                <div class="collapesItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'v-travel-thai'}"
+                    id="v-travel-thai" (click)="sidebarService.addClass('v-travel-thai'); sidebarService.closeNav();">
+                    V Travel Thailand
+                </div>
+            </a>
+        </div>
+
+        <!-- ติดต่อเรา (Contact) -->
+        <a routerLink="/others/contact" routerLinkActive="active">
+            <div class="sidebarItems" [ngClass]="{'selectedSidebarItem': sidebarService.id === 'contact'}" id="contact"
+                (click)="sidebarService.addClass('contact'); sidebarService.closeNav();">ติดต่อเรา</div>
+        </a>
     </div>
     <div id="main" class="container" [ngClass]="{'arrange': sidebarService.isArranged}">
         <img width="100%" height="100%" src="../assets/images/head.jpg"
             style="position:relative; border-radius: 10px 10px 0px 0px;">
         <div style="width: 100%; margin-left: auto; margin-right: auto; margin-top: 0.5%;" class="row ">
-            <button class="openbtn col-2" style="width: 12vh;" id="menuButton" (click)="sidebarService.openNav()">&#9776;
+            <button class="openbtn col-2" style="width: 12vh;" id="menuButton"
+                (click)="sidebarService.openNav()">&#9776;
                 เมนู</button>
             <div class="col" style="background-color: #011F5B;"></div>
         </div>

@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class Type2PlusComponent {
     public type: any;
-    fileNames: Array<number> = [1];
+    fileNames: Array<number> = [1,2];
     folder: String = 'insurance/type2-plus';
 }

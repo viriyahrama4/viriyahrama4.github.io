@@ -16,16 +16,7 @@ export class SidebarHealthComponent implements OnInit {
     ngOnInit() {
         this.route.url.subscribe(url => {
             let currentSubPath = url[0]?.path;
-            if (currentSubPath === 'personal') {
-                this.sidebarService.addClass('personal');
-            }
-            else if (currentSubPath === '24hours') {
-                this.sidebarService.addClass('everytime');
-            }
-            else if (currentSubPath === 'bone') {
-                this.sidebarService.addClass('bone');
-            }
-            else if (currentSubPath === 'roomCare') {
+            if (currentSubPath === 'roomCare') {
                 this.sidebarService.addClass('roomCare');
             }
             else if (currentSubPath === 'health') {

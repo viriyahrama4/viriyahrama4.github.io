@@ -7,7 +7,7 @@ import { HospitalComponent } from './hospital/hospital.component';
 import { AccidentComponent } from './accident/accident.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'personal', pathMatch: 'full' },
+    { path: '', redirectTo: 'roomCare', pathMatch: 'full' },
     { path: 'roomCare', component: RoomCareComponent },
     { path: 'health/:type', component: HealthComponent },
     { path: 'accident/:type', component: AccidentComponent },
