@@ -45,13 +45,13 @@ public type: any;
             this.folder = 'pa-beauty-care'
             this.fileNames = [1, 2, 3, 4, 5, 6];
             this.title = 'ประกันอุบัติเหตุ PA อุ่นใจบิวตี้แคร์'
-            this.hasForm = false;
+            this.hasForm = true;
         }
         else if (this.type == 'paElderly') {
             this.folder = 'pa-elderly'
             this.fileNames = [1, 2, 3, 4, 5, 6, 7];
             this.title = 'ประกันอุบัติเหตุ PA อุ่นใจวัยเก๋า'
-            this.hasForm = false;
+            this.hasForm = true;
         }
         else if (this.type == 'paFamily') {
             this.folder = 'pa-family'
