@@ -1,0 +1,207 @@
+/* Compensation Component Styles */
+.compensation-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+
+.compensation-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.compensation-header h1 {
+  color: #2c5aa0;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.compensation-section {
+  margin-bottom: 30px;
+}
+
+.compensation-card {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.compensation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 30px;
+}
+
+.icon-section {
+  flex-shrink: 0;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+.icon-section img {
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Remove old icon styles that are no longer needed */
+.question-icon,
+.coins-icon,
+.documents-icon {
+  display: none;
+}
+
+/* Full page image styles */
+.full-page-image {
+  margin-bottom: 40px;
+}
+
+.full-page-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.full-page-image-container img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.text-section {
+  flex: 1;
+  color: white;
+}
+
+.text-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: #fbbf24;
+}
+
+.text-section h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  color: white;
+}
+
+.text-section h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 15px 0;
+  color: #e5e7eb;
+  line-height: 1.5;
+}
+
+.text-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+  color: #d1d5db;
+}
+
+.criteria-list, .documents-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+.criteria-list li, .documents-list li {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  color: #d1d5db;
+  padding-left: 0;
+}
+
+.note {
+  font-size: 12px;
+  color: #9ca3af;
+  font-style: italic;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .compensation-container {
+    padding: 15px;
+  }
+
+  .card-content {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .icon-section {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .icon-section img {
+    max-width: 350px;
+  }
+
+  .compensation-header h1 {
+    font-size: 24px;
+  }
+
+  .text-section h2 {
+    font-size: 20px;
+  }
+
+  .text-section h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .compensation-container {
+    padding: 10px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .icon-section img {
+    max-width: 280px;
+  }
+
+  .compensation-header h1 {
+    font-size: 20px;
+  }
+
+  .text-section h2 {
+    font-size: 18px;
+  }
+
+  .text-section h3 {
+    font-size: 16px;
+  }
+}

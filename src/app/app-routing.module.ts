@@ -6,7 +6,7 @@ const routes: Routes = [
     { path: 'health-and-accident', loadChildren: () => import('./health-and-accident/health-and-accident.module').then(m => m.HealthAndAccidentModule) },
     { path: 'others', loadChildren: () => import('./others/others.module').then(m => m.OthersModule) },
     { path: 'insurance', loadChildren: () => import('./insurance/insurance.module').then(m => m.InsuranceModule) },
-
+    { path: 'compensation', loadChildren: () => import('./compensation/compensation.module').then(m => m.CompensationModule) },
 ];
 
 @NgModule({
