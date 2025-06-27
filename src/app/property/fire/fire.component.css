@@ -1,0 +1,126 @@
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
+    padding: 30px;
+}
+
+.coverage-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.coverage-title {
+    color: #d32f2f;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.coverage-subtitle {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.coverage-list {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.coverage-list li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.period-section {
+    background-color: #fff3e0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #ff9800;
+}
+
+.period-title {
+    color: #ff9800;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.period-text {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ff9800;
+    margin: 0;
+}
+
+.note-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #6c757d;
+}
+
+.note-title {
+    color: #6c757d;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.note-list {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.note-list li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.video-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive-16by9 {
+    padding-bottom: 56.25%;
+}
+
+.embed-responsive-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contact-section {
+    background-color: #d32f2f;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+}

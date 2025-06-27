@@ -1,0 +1,141 @@
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+object-fit: contain;
+    border-radius: 10px 10px 0 0;
+    padding: 30px;
+}
+
+.coverage-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.coverage-title {
+  color: #011F5B;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.section-detail {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+  border-left: 4px solid #011F5B;
+}
+
+.section-title {
+  color: #011F5B;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.section-description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.subsection-list {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.subsection-list li {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.appendix-section {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff3cd;
+  border-radius: 4px;
+}
+
+.appendix-item {
+  margin: 5px 0;
+  color: #856404;
+  font-size: 0.9em;
+}
+
+.period-section {
+  background-color: #d4edda;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.period-title {
+  color: #155724;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.period-text {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #155724;
+  margin: 0;
+}
+
+.note-section {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #6c757d;
+}
+
+.note-title {
+  color: #6c757d;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.video-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact-section {
+  background-color: #011F5B;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background-color: #0e245f;
+  border-color: #0e245f;
+}
