@@ -13,7 +13,7 @@
 
 .compensation-header h1 {
   color: #2c5aa0;
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 600;
   margin: 0;
 }
@@ -96,21 +96,21 @@
 }
 
 .text-section h2 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   margin: 0 0 5px 0;
   color: #fbbf24;
 }
 
 .text-section h3 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   margin: 0 0 20px 0;
   color: white;
 }
 
 .text-section h4 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   margin: 0 0 15px 0;
   color: #e5e7eb;
@@ -118,7 +118,7 @@
 }
 
 .text-section p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   margin: 0 0 10px 0;
   color: #d1d5db;
@@ -131,7 +131,7 @@
 }
 
 .criteria-list li, .documents-list li {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 8px;
   color: #d1d5db;
@@ -139,11 +139,66 @@
 }
 
 .note {
-  font-size: 12px;
+  font-size: 16px;
   color: #9ca3af;
   font-style: italic;
   margin-top: 15px;
   line-height: 1.5;
+}
+
+/* Bootstrap Card Overrides for Compensation */
+.card-title {
+  font-size: 32px !important;
+  font-weight: 600 !important;
+  color: #2c5aa0 !important;
+  margin-bottom: 20px !important;
+}
+
+.card-text {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 15px !important;
+}
+
+.coverage-title, .note-title {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  color: #2c5aa0 !important;
+  margin-bottom: 15px !important;
+}
+
+.coverage-subtitle {
+  font-size: 16px !important;
+  color: #6b7280 !important;
+  font-style: italic !important;
+  margin-bottom: 15px !important;
+}
+
+.coverage-list {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+
+.coverage-list li {
+  margin-bottom: 10px !important;
+  font-size: 18px !important;
+}
+
+.note-list {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+
+.note-list li {
+  margin-bottom: 10px !important;
+  font-size: 18px !important;
+}
+
+/* Center page title */
+h2.text-center {
+  font-size: 40px !important;
+  font-weight: 600 !important;
+  color: #2c5aa0 !important;
 }
 
 /* Responsive Design */
@@ -168,15 +223,51 @@
   }
 
   .compensation-header h1 {
-    font-size: 24px;
+    font-size: 30px;
   }
 
   .text-section h2 {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .text-section h3 {
+    font-size: 22px;
+  }
+
+  .text-section h4 {
     font-size: 18px;
+  }
+
+  .text-section p {
+    font-size: 16px;
+  }
+
+  .criteria-list li, .documents-list li {
+    font-size: 16px;
+  }
+
+  .note {
+    font-size: 14px;
+  }
+
+  .card-title {
+    font-size: 28px !important;
+  }
+
+  .coverage-title, .note-title {
+    font-size: 22px !important;
+  }
+
+  .card-text, .coverage-list, .note-list {
+    font-size: 16px !important;
+  }
+
+  .coverage-list li, .note-list li {
+    font-size: 16px !important;
+  }
+
+  h2.text-center {
+    font-size: 32px !important;
   }
 }
 
@@ -194,14 +285,50 @@
   }
 
   .compensation-header h1 {
-    font-size: 20px;
+    font-size: 26px;
   }
 
   .text-section h2 {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .text-section h3 {
+    font-size: 20px;
+  }
+
+  .text-section h4 {
     font-size: 16px;
+  }
+
+  .text-section p {
+    font-size: 14px;
+  }
+
+  .criteria-list li, .documents-list li {
+    font-size: 14px;
+  }
+
+  .note {
+    font-size: 12px;
+  }
+
+  .card-title {
+    font-size: 24px !important;
+  }
+
+  .coverage-title, .note-title {
+    font-size: 20px !important;
+  }
+
+  .card-text, .coverage-list, .note-list {
+    font-size: 14px !important;
+  }
+
+  .coverage-list li, .note-list li {
+    font-size: 14px !important;
+  }
+
+  h2.text-center {
+    font-size: 28px !important;
   }
 }
